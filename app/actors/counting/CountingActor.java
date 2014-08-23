@@ -14,6 +14,9 @@ public class CountingActor extends UntypedActor {
 				System.out.println(getSelf().toString()+" : "+m);
 				getSender().tell(new CountDown(m-1), getSelf());
 			}
+			else{
+				getContext().system().shutdown();
+			}
 		}
 		if (message instanceof KickOff){
 			int m=((KickOff) message).getN();

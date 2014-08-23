@@ -29,7 +29,8 @@ public class AdderActor extends UntypedActor {
 			result += childSum;
 			childrenFinished++;
 			if (childrenFinished==numberOfChilds){				
-				System.out.println(self() + "Result: " +result);				
+				System.out.println(self() + "Result: " +result);		
+				getContext().system().shutdown();
 			}
 	}
 }		
