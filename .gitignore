@@ -1,3 +1,4 @@
+/project
 /.target
 /target
 /logs
@@ -6,3 +7,4 @@
 /.classpath
 /.project
 /.settings
+
